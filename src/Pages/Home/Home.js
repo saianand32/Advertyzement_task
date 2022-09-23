@@ -1,4 +1,3 @@
-import axios from 'axios'
 import React, {useContext} from 'react'
 import Usercard from '../../Components/Usercard/Usercard';
 import UserContext from '../../Context/UserContext';
@@ -15,7 +14,7 @@ import Landing from '../../Components/Landing/Landing';
 function Home() {
   
     const context = useContext(UserContext);
-    const {info,load,setInfo} = context;
+    const {info,load} = context;
 
 
   
@@ -25,7 +24,7 @@ function Home() {
     <div className="homeContainer">
   
 
-   {info.length==0? (
+   {info.length===0? (
    
    <div id = "landing">
     <Landing/>
